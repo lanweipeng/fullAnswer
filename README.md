@@ -1,4 +1,4 @@
-##高频面试大纲
+## 高频面试大纲
 算法：[快排](https://github.com/lanweipeng/fullAnswer/issues/2)
 数据结构：二叉树
 计算机网络：http和https，header参数，状态码，tcp三次握手，url输入后的过程
@@ -12,7 +12,7 @@ react：context，redux，hooks，事件系统原理
 优化：说说优化，防抖原理
 项目：介绍、难点
 
-###算法
+### 算法
 [快排](https://github.com/lanweipeng/fullAnswer/issues/2)
 ##这个开源项目的来源
 一直想在github开源一个项目，获得star，来作为简历的亮点
