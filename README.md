@@ -1,13 +1,13 @@
 ## 高频面试大纲
 算法：[快排](https://github.com/lanweipeng/fullAnswer/issues/2)
 数据结构：二叉树
-计算机网络：http和https，header参数，状态码，tcp三次握手，url输入后的过程
-css：布局
-es5：闭包，原型链，继承，this
-es6：let const,promise，箭头函数
+计算机网络：http和https，header参数，状态码，tcp三次握手，[url输入后的过程](https://github.com/lanweipeng/fullAnswer/issues/1)
+css：布局，[盒模型](https://github.com/lanweipeng/fullAnswer/issues/7)
+es5：闭包，原型链，[继承](https://github.com/lanweipeng/fullAnswer/issues/3)，this
+es6：let const,promise，[箭头函数](https://github.com/lanweipeng/fullAnswer/issues/8)
 vue、react：组件传参，生命周期，状态管理
 vue：双向绑定原理
-react：context，redux，hooks，事件系统原理
+react：context，redux，hooks，[事件系统原理](https://github.com/lanweipeng/fullAnswer/issues/3)
 框架：各自框架区别
 优化：说说优化，防抖原理
 项目：介绍、难点
