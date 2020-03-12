@@ -1,7 +1,8 @@
+关键词：前端面试题库、高频前端面试题、大厂面试题、算法面试题
 ## 高频面试大纲
 - 算法：[快排](https://github.com/lanweipeng/fullAnswer/issues/2)
 - 数据结构：二叉树
-- 计算机网络：http和https，header参数，状态码，tcp三次握手，[url输入后的过程](https://github.com/lanweipeng/fullAnswer/issues/1)
+- 计算机网络：http和https，header参数，状态码，tcp三次握手，[url输入后的过程](https://github.com/lanweipeng/fullAnswer/issues/1)，跨域
 - css：布局，[盒模型](https://github.com/lanweipeng/fullAnswer/issues/7)
 - es5：闭包，原型链，[继承](https://github.com/lanweipeng/fullAnswer/issues/3)，this
 - es6：let const,promise，[箭头函数](https://github.com/lanweipeng/fullAnswer/issues/8)
@@ -14,7 +15,16 @@
 
 ### 算法
 [快排](https://github.com/lanweipeng/fullAnswer/issues/2)
+### css
+- [伪类和伪元素](https://github.com/lanweipeng/fullAnswer/issues/9)
+### 网络
+- [跨域](https://github.com/lanweipeng/fullAnswer/issues/10)
 
+## 易忘知识点
+这部分比较容易，建议每天看看
+- 计算机网络：[状态码](https://github.com/lanweipeng/fullAnswer/issues/12)
+## 按公司划分
+字节
 ## 这个开源项目的来源
 一直想在github开源一个项目，获得star，来作为简历的亮点
 
