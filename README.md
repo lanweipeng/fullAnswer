@@ -45,8 +45,8 @@
 ### 之后打算：
 让hr也进来这个网站，更好的去推荐，更好的去匹配
 ## 技术栈
-前端：angular
-后端egg
+前端：[angular](https://angular.cn/start)
+后端:[egg](https://eggjs.org/en/intro/quickstart.html)
 数据库：mongdb
 ## 贡献
 欢迎来start这个项目吸引更多的人贡献
