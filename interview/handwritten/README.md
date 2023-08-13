@@ -1,4 +1,9 @@
-## [eventEmitter](eventEmitter/eventEmitter.md)
+- [eventEmitter](eventEmitter/eventEmitter.md)
+- [call、apply、bind](call、apply、bind.md)
+- [new](new.md)
+- 防抖
+- 节流
+- 
 
 > 按照字节某面试官的标准，分为以下几档，如果你想脱引而出，光能实现是不够的，而是能在实现功能的基础上，能深入想多少，就深入多少。
 
