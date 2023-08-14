@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <div id="input"></div>
+      <button id="add">add</button>
+    </body>
+    <script>
+      var input = document.getElementById("input");
+      input.innerHTML = "1";
+      function debounce(fn, wait, immediate = false) {
+        let timer = 0;
+        let isInvoke = false;
+        return function (...args) {
+          if (timer) clearTimeout(timer);
+          if (immediate && !isInvoke) {
+            fn.apply(this, args);
+            isInvoke = true;
+          } else {
+            timer = setTimeout(() => {
+              !immediate && fn.apply(this, args);
+              isInvoke = false;
+            }, wait);
+          }
+        };
+      }
+      let i = 0;
+      function addFn() {
+        var input = document.getElementById("input");
+        input.innerHTML = +input.innerHTML + 1;
+      }
+      function sleep(delay) {
+        const start = new Date().getTime();
+        while (new Date().getTime() - start < delay) {
+          continue;
+        }
+      }
+      const add1 = debounce(addFn, 3000, true);
+
+      var add = document.getElementById("add");
+      add.addEventListener("click", add1);
+    </script>
+  </body>
+</html>

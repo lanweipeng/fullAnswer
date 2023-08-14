@@ -1,0 +1,5 @@
+- 页面导入样式时，@import 和 link 的区别
+  - @import 只能导入样式表，link 可以定义 RSS、rel 连接属性、引用网站标签等；
+  - 加载页面时，link 引入的 css 同时被加载，而@import 在页面加载完毕后加载
+  - 兼容性区别
+- [webp](https://juejin.cn/post/7195095420396109879?searchId=2023081413561512610B46CC6281EF52B8)
