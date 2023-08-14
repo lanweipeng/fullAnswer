@@ -1,3 +1,10 @@
+- [eventEmitter](eventEmitter.md)
+- [call、apply、bind](call、apply、bind.md)
+- [new](new.md)
+- 防抖
+- 节流
+-
+
 > 按照字节某面试官的标准，分为以下几档，如果你想脱引而出，光能实现是不够的，而是能在实现功能的基础上，能深入想多少，就深入多少。
 
 5. 能较好的完成编码题目，能考虑到边界条件，无明显 bug，知道考虑复杂度和性能
@@ -5,7 +12,3 @@
 7. 能比较好的完成编码题目，无明显 bug
 8. 不能完成编码题目
 9. 不愿意写（直接淘汰）
-
-## [eventEmitter](eventEmitter/eventEmitter.md)
-
-## [call、apply、bind](call、apply、bind.md)
