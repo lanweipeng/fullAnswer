@@ -49,7 +49,7 @@
 - 状态管理
 - vue3
 - vue 如何实现双向绑定的？
-- defineProperty 有什么缺点？为什么用 Proxy，对
+- [defineProperty 有什么缺点？为什么用 Proxy](https://juejin.cn/post/7069397770766909476?searchId=202308181559441491F3010099B2ACD2EF)
 
 ### React
 
