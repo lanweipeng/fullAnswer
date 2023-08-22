@@ -20,7 +20,7 @@ class Stack {
     return this.items.length === 0;
   }
   top() {
-    this.item[this.size() - 1];
+    return this.items[this.size() - 1];
   }
   size() {
     return this.items.length;
