@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+          <meta charset="utf-8">
+		<title>用BFC设置多栏布局</title>
+		<style type="text/css">
+  .left{
+                float: left;
+                width: 200px;
+                height: 100px;
+                background-color: green;
+            }  
+ .right{
+        float: right;
+        width: 200px;
+        height: 100px;
+        background-color: pink;
+    }
+  .center{
+        overflow: hidden;
+        height: 100px;
+        background-color: yellow;
+    }
+        </style>
+	</head>
+	<body>
+       <div class="taxian">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center"></div>
+    </div>
+	</body>
+</html>
