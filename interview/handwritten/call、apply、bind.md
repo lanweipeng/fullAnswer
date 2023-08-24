@@ -166,6 +166,7 @@ Function.prototype.myBind = function (context, ...args) {
   const _context = context || globalThis; //globalThisl可能是浏览器的window也可能是node的global
   const that = this;
   return function F(...innerArgs) {
+    //因为这里返回一个函数，可以new fn，所以需要判断一下
     return that.apply(this instanceof F ? this : _context, [
       ...args,
       innerArgs,

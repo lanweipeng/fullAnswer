@@ -102,5 +102,5 @@
 ```
 ![截屏2023-08-20 上午3.00.23.png](https://upload-images.jianshu.io/upload_images/11739051-dd6ef9863d7b155c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ## 参考链接
-[b站：面试官：你知道BFC吗？](https://www.bilibili.com/video/BV1Bd4y1e7od/?spm_id_from=333.337.search-card.all.click&vd_source=1717bca8aebff18ca2591bd114c54e3f)视频制作非常棒
-[MDN bfc](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [b站：面试官：你知道BFC吗？](https://www.bilibili.com/video/BV1Bd4y1e7od/?spm_id_from=333.337.search-card.all.click&vd_source=1717bca8aebff18ca2591bd114c54e3f)视频制作非常棒
+- [MDN bfc](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)

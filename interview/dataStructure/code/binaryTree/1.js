@@ -103,33 +103,25 @@ class BinaryTree {
     this.#postOrder(node.rightChild);
     console.log(node.data);
   }
-  //非递归后序：左右根
-  postOrderByWhileAndStack() {
-    let currNode = this.#root;
+  //非递归后序：左右根（双栈法）
+  postOrderByWhileAnd2Stacks() {
     const stack = new Stack();
-    let flag;
-    while (1) {
-      if (currNode) {
-        stack.push(currNode);
-        currNode = currNode.leftChild;
-      } else {
-        currNode = stack.pop();
-        if (!currNode.rightChild || flag === tree) {
-          console.log(currNode.data);
-          currNode = null;
-        } else {
-          stack.push(currNode);
-          flag = true;
-          currNode = currNode.rightChild;
-        }
-      }
-      if (stack.isEmpty()) {
-        break;
-      }
+    stack.push(this.#root)
+    const outputStack = new Stack();
+    while(!stack.isEmpty()){
+      const currNode=stack.pop();
+      outputStack.push(currNode)
+      currNode.leftChild&&stack.push(currNode.leftChild)
+        currNode.rightChild&&stack.push(currNode.rightChild)
+    }
+    while(!outputStack.isEmpty()){
+      console.log(outputStack.pop().data)
     }
   }
-  // console.log:D
-  // [ACBE] currNode:E
+
+  //currNode:A
+  // [] 
+  //ou [ACFBEGD]
   //in|pre|post
   prinInOrder(order) {
     if (order === "in") {
@@ -191,5 +183,6 @@ tree.prinInOrder("post");
 // tree.inOrderByWhileAndStack();
 console.log("---");
 // tree.preOrderByWhileAndStack();
-tree.postOrderByWhileAndStack();
+// tree.postOrderByWhileAndStack();
 //中序：DBGEACF
+tree.postOrderByWhileAnd2Stacks()
