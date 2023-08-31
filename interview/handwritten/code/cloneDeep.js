@@ -73,8 +73,8 @@ var a = {
 };
 var b = { r: a };
 // a.r = b;
-// var clone = cloneDeep(a);
-var clone = _.cloneDeep(a);
+var clone = cloneDeep(a);
+// var clone = _.cloneDeep(a);
 console.log(
   clone,
   a.sy === clone.sy,
