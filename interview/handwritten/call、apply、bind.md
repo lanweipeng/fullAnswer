@@ -124,23 +124,39 @@ Function.prototype.myCall = function (context, ...args) {
     enumerable: false,
     value: this,
   });
+  delete context[key];
   const result = context[key](...args);
   return result;
 };
 ```
-
+但是如果第一个参数是null或者基础类型，就错了。
+在原生call里，如果第一个参数是null则为全局，如果是基础类型，就变成引用类型。
+```js
+Function.prototype.myCall = function (context, ...args) {
+  var context = context ==null? globalThis:Object(context); //globalThisl可能是浏览器的window也可能是node的global
+  const key = Symbol("changeThis");
+  Object.defineProperty(context, key, {
+    enumerable: false,
+    value: this,
+  });
+  delete context[key];
+  const result = context[key](...args);
+  return result;
+};
+```
 到此为止 call 就实现了，接下来实现 apply 和 bind 也会变得非常简单
 
 ### apply
 
 ```js
 Function.prototype.myApply = function (context, args) {
-  var context = context || globalThis; //globalThisl可能是浏览器的window也可能是node的global
+ var context = context ==null? globalThis:Object(context);
   const key = Symbol("changeThis");
   Object.defineProperty(context, key, {
     enumerable: false,
     value: this,
   });
+  delete context[key];
   const result = context[key](...args);
   return result;
 };
@@ -150,7 +166,7 @@ Function.prototype.myApply = function (context, args) {
 
 ```js
 Function.prototype.myBind = function (context, ...args) {
-  const context = context || globalThis; //globalThisl可能是浏览器的window也可能是node的global
+  var context = context ==null? globalThis:Object(context);
   const that = this;
   return function (...innerArgs) {
     that.apply(context, [...args, innerArgs]);

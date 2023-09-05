@@ -27,13 +27,18 @@ console.log(s1.__proto__===Student.prototype)
 console.log(s1.constructor===Student)
 
 let s2 = createObj(Student, 'hw');
+console.log(s2)
 console.log(s2.getName())
 console.log(s2.__proto__===Student.prototype)
 console.log(s2.constructor===Student)
 
-createObj(1)
+function newFn(Constructor,...param){
+  let newObj = {};
+  newObj.__proto__=Constructor.prototype;
+  const res=Constructor.prototype.constructor.call(newObj,...param);
+  return typeof res==='object'?res:newObj;
+}
 
 
-
-// createObj(()=>{})
-// new ()=>{}
+let s3 = newFn(Student,'lwp');
+console.log(s3)

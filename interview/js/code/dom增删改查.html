@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    var dom = document.getElementById('root');
+    const p1 = document.createElement('p');
+    p1.innerHTML = 'p1';
+    const p2 = document.createElement('p');
+    p2.innerHTML = 'p2';
+    //增
+    dom.appendChild(p1)
+    dom.appendChild(p2)
+    setTimeout(() => {
+      //删
+      dom.removeChild(p1)
+    }, 2000);
+    dom.children[1].style='background:red';
+    console.log(dom.children)
+  </script>
+</body>
+</html>

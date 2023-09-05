@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <body>
+    <div id="input"></div>
+    <button id="add">add</button>
+  </body>
+  <script>
+    var input = document.getElementById("input");
+    input.innerHTML = "1";
+    function throttle(fn, wait) {
+      let time;
+      return function (...args) {
+        if (!time) {
+          time = setTimeout(() => {
+            fn.apply(this, args);
+            time = 0;
+          }, wait)
+        }
+      }
+    }
+
+    // function throttle(func, wait, options = {}) {
+    //   let timeout = 0;
+    //   let oldTime = 0;
+    //   const { leading = false, trailing = true } = options;
+    //   return function (...args) {
+    //     let newTime = new Date().valueOf();
+
+    //     if (newTime - oldTime > wait && leading !== false) {
+    //       func.apply(this, arguments);
+    //       oldTime = newTime;
+    //       if (timeout) {
+    //         //关键代码块
+    //         clearTimeout(timeout);
+    //         timeout = 0;
+    //       }
+    //     }
+    //     if (!timeout && trailing !== false) {
+    //       console.log("hh");
+    //       timeout = setTimeout(() => {
+    //         oldTime = new Date().valueOf(); //关键代码
+    //         timeout = 0;
+    //         func.apply(this, args);
+    //       }, wait);
+    //     }
+    //   };
+    // }
+
+    let i = 0;
+    function addFn() {
+      var input = document.getElementById("input");
+      input.innerHTML = +input.innerHTML + 1;
+    }
+    function sleep(delay) {
+      const start = new Date().getTime();
+      while (new Date().getTime() - start < delay) {
+        continue;
+      }
+    }
+    const add1 = throttle(addFn, 3000);
+    // const add1 = throttle(addFn, 3000, { leading: true, trailing: false });
+
+    var add = document.getElementById("add");
+    add.addEventListener("click", add1);
+  </script>
+</body>
+
+</html>

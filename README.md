@@ -20,10 +20,13 @@
 
 | 序号 | 分类                                      |
 | ---- | ----------------------------------------- |
-|      | [css](interview/css.md)                   |
-| 1    | [javaScript](interview/es5/README.md)     |
-| 2    | [手写题](interview/handwritten/README.md) |
-| 3    | [nodejs](interview/node/README.md)        |
+|  1    | [html](interview/html.md)                   |
+|   2   | [css](interview/css.md)                   |
+|    3 | [javaScript](interview/js/README.md)     |
+|    3 | [es5](interview/es5/README.md)     |
+|    3 | [es6](interview/es6/README.md)     |
+| 4    | [手写题](interview/handwritten/README.md) |
+| 5   | [nodejs](interview/node/README.md)        |
 
 |浏览器渲染原理
 
@@ -43,13 +46,7 @@
 
 ### vue
 
-- 双向绑定原理
-- 组件传参
-- 生命周期
-- 状态管理
-- vue3
-- vue 如何实现双向绑定的？
-- [defineProperty 有什么缺点？为什么用 Proxy](https://juejin.cn/post/7069397770766909476?searchId=202308181559441491F3010099B2ACD2EF)
+
 
 ### React
 
