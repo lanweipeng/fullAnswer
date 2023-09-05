@@ -5,7 +5,7 @@
 > https://whatwg-cn.github.io/html/multipage/#toc-webappapis
 8.1.6事件循环
 ## 宏任务
-script setTimeout setInterval I/O UI Render setImmediate(node) 
+script setTimeout setInterval I/O UI Render setImmediate(node) ajax
 - MessageChannel
 ```js
 const channel = new MessageChannel();
