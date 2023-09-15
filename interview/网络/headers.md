@@ -1,0 +1,22 @@
+## Request Headers
+- Accept 浏览器可接受的数据格式
+  - text/html
+- Accept-Encoding 浏览器可接收的压缩算法，如gzip
+- Accept-Language 支持的语言
+- Connection：keep-alive 一次TCP连接重复使用
+- User-Agent（UA）浏览器信息
+- Content-type发送数据的格式，
+  - application/json
+  - img/png
+- Cookie
+- Catch-Controll强制缓存
+- Host
+- If-Modified-Since
+- If-Modified-Match
+## Response Headers
+- Content-type发送数据的格式，如application/json
+- Content-length：返回数据的大小，多少字节
+- Content-Encoding：返回数据的压缩算法，如gzip
+- set-cookie
+- Etag
+- Last-Modifed

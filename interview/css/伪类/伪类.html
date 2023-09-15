@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a:link {
+      /* 未访问链接 */
+      color: blue;
+    }
+
+    a:visited {
+      /* 已访问链接 */
+      color: purple;
+    }
+
+    a:hover {
+      /* 用户鼠标悬停 */
+      background: yellow;
+    }
+
+    a:active {
+      /* 激活链接 */
+      color: red;
+    }
+
+    p:active {
+      /* 激活段落 */
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    This paragraph contains a link:
+    <a href="#">This link will turn red while you click on it.</a>
+    The paragraph will get a gray background while you click on it or the link.
+  </p>
+</body>
+
+</html>

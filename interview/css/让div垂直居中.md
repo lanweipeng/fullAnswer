@@ -1,11 +1,21 @@
+定宽高
+- absolute+负margin
+- absolute+margin auto
+- absolute+calc
+不定宽高
+- absolute+transform
+- lineheight
+- writing-mode
+- table
+- css-table
+- flex
+- grid
+## absolute+负margin
 ```html
 <div class="father">
   <div class="son"></div>
 </div>
 ```
-
-1. 子绝父相
-
 ```css
 .father {
   position: relative;
@@ -18,7 +28,52 @@
   margin-top: -(父元素高度-子元素高度)/2 px;
 }
 ```
-
+## absolute+auto
+```html
+<div class="father">
+  <div class="son"></div>
+</div>
+```
+```css
+   .father{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .son{
+      background-color: black;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+```
+## absolute+cale
+```html
+<div class="father">
+  <div class="son"></div>
+</div>
+```
+```css
+.father {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.son {
+    width: 100px;
+      height: 100px;
+  position: absolute;
+  top:cale(50% - 50px);
+  left:cale(50% - 50px);
+}
+```
+## absollute+transform
 ```css
 .father {
   position: relative;
@@ -31,7 +86,7 @@
 }
 ```
 
-2.flex
+## flex
 
 ```css
 .father {
@@ -41,7 +96,7 @@
 }
 ```
 
-3.grid
+## grid
 
 ```css
 .father {
@@ -57,4 +112,5 @@
 
 ## 参考内容
 
-[grid 布局-阮一峰](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+- [grid 布局-阮一峰](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+- [CSS实现水平垂直居中的10种方式](https://juejin.cn/post/6844903679242305544?searchId=20230909222658C6F9D6A4FAD1A9C911AC)
