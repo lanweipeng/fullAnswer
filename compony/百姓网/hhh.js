@@ -16,21 +16,18 @@ function transformStruct(array){
     const item=array[i];
     maxLen=Math.max(maxLen,item.data.length)
   }
-  const arr=[]
-  for(let i=0;i<maxLen;i++){
-    arr[i]={};
-
-
+  const arr = new Array(maxLen).fill({});
+  return arr.map((item,i)=>{
     for(let j=0;j<array.length;j++){
       const data=array[j]?.data
       const type=array[j]?.type
       if(data[i]){
-        arr[i][type]=data[i];
+        item[type]=data[i];
       }
-    
     }
-  }
-  return arr;
+    return item;
+  })
+  return arr
 }
 console.log(transformStruct(initList))
 //期望

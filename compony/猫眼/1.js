@@ -27,6 +27,36 @@
  * @return {number[][]}
  */ 
 function findGentle(candidates,target){
+  candidates = candidates.filter(item=>item<=target).sort((a,b)=>a-b)
+  let arr=[];
+  function findPossibility(target,temp,start){
+    if(target<0){
+      return
+    }
+    if(target===0){
+      arr.push(temp)
+      return
+    }
+    for(let i=start;i<candidates.length;i++){
+      const item = candidates[i];
+        findPossibility(target-item,[...temp,item],i+1)
+    }
+  }
+  findPossibility(target,[],0)
+  return deduplicateArr(arr);
+}
+function deduplicateArr(arr){
+  let strArr = arr.map(item=>item.join(''));
+  strArr = Array.from(new Set(strArr))
+  const res = strArr.map(item=>{
+    const array = item.split('');
+    return array.map(i=>+i)
+  })
+  return res;
+}
+/**
+ * 
+function findGentle(candidates,target){
   const arr = [];
 
   candidates = candidates
@@ -53,6 +83,7 @@ function includesArr(tdArr,arr){
 function arrIsSame(arr1,arr2){
   return arr1.length===arr2.length&&arr1.every((v,i)=>v===arr2[i])
 }
+ */
 
 console.log(findGentle([2,5,2,1,2],5))
 console.log(findGentle([10,1,2,7,6,1,5],8))
