@@ -1,6 +1,16 @@
 ## useState
 ```jsx
 const [count, setCount] = useState(1)
+//setState 的两种用法
+setCount(count+1)
+setCount(count=>count+1)
+
+//初始 state 需要通过复杂计算获得
+const [state, setState] = useState(() => {
+  const initialState = someExpensiveComputation(props);
+  return initialState;
+});
+
 ```
 ## useEffect
 ```jsx
@@ -38,5 +48,24 @@ useLayoutEffect(()=>{
 会发现一开始一直是兰为鹏
 因为useLayoutEffect是跟渲染是同步执行，会等dom更新之后，再去绘制到浏览器上面去
 缺点：会阻塞
+useState
+useEffect
+useContext
+额外的 Hook
+
+useReducer
+useCallback
+useMemo
+useRef
+useImperativeHandle
+useLayoutEffect
+useDebugValue
+useDeferredValue
+useTransition
+useId
+Library Hooks
+
+useSyncExternalStore
+useInsertionEffect
 ## 参考
 - [【React Hooks】掌握及对比常用的8个Hooks（优化及使用场景）](https://blog.csdn.net/qq_40597589/article/details/112462395)

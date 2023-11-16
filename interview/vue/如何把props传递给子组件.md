@@ -1,0 +1,1 @@
+<child v-bind="$props"></child>

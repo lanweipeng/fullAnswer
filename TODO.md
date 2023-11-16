@@ -1,0 +1,9 @@
+- express
+- vuex
+- vue-router
+- react-router-dom
+- vue2
+- vue3
+- react
+- express-generator(看看能不能自己也写一套模版)
+- 8080(自动加1)
