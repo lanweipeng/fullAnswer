@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="console.log(this.tagName+'标签')">div
+        <p onclick="console.log(this.tagName+'标签')">p
+            <a href="#" id="link">xxx</a>
+        </p>
+    </div>
+    <script>
+        function sayHi(event){
+            console.log('sayHi')
+            // event.stopImmediatePropagation()
+            event.stopPropagation()
+            // event.preventDefault()
+        }
+        function sayHello(event){
+            console.log('sayHello')
+        }
+        var link = document.getElementById('link')
+        link.addEventListener('click',sayHi)
+        link.addEventListener('click',sayHello)
+    </script>
+</body>
+</html>

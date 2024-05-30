@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>p1</p>
+    <p>p2</p>
+    <script>
+        function hide(e) {
+            e.currentTarget.style.visibility = "hidden";
+            console.log('currentTarget',e.currentTarget);
+            console.log('target',e.target);
+            // 该函数用作事件处理器时：this === e.currentTarget
+        }
+
+        var ps = document.getElementsByTagName("p");
+
+        for (var i = 0; i < ps.length; i++) {
+            // console: 打印被点击的 p 元素
+            ps[i].addEventListener("click", hide, false);
+        }
+        // console: 打印 body 元素
+        document.body.addEventListener("click", hide, false);
+    </script>
+</body>
+
+</html>
